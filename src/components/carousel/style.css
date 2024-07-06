@@ -1,0 +1,46 @@
+.slick-dots {
+  bottom: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  transition: 0.59s;
+}
+
+.slick-dots li button::before {
+  content: "";
+}
+
+.slick-dots li {
+  background-color: white;
+  border-radius: 20px;
+}
+.slick-dots .slick-active {
+  background-color: #ff0000;
+  height: 15px;
+  width: 40px;
+}
+.slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-1 {
+  background-image: url(../../assets/fd1132de32fcc36eb79ecf8eb0d99c64.jpg);
+}
+
+.slide-2 {
+  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRX0QfgMiNfyxNOsKxxu1X8CtoPYMyDTF_nblh6gGJ29Q0GnttM");
+}
+
+.slider_buttons {
+  position: absolute;
+  top: 50%;
+  margin-left: 4%;
+  display: flex;
+  gap: 40px;
+}
+
+.slider_buttons p {
+  color: white;
+}
