@@ -6,6 +6,9 @@ import Slider from "react-slick";
 import { Button } from "@mui/material";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
+import dateIcon from "../../assets/date.svg";
+import timeIcon from "../../assets/time.svg";
+import starIcon from "../../assets/star.svg";
 
 function Carousel() {
   const settings = {
@@ -22,25 +25,49 @@ function Carousel() {
         <div>
           <div className="slide slide-1">
             <div className="container">
-              <div className="slider_buttons">
-                <Button
-                  variant="contained"
-                  style={{
-                    backgroundColor: "red",
-                    color: "white",
-                    fontSize: "30px",
-                  }}
-                >
-                  Watch Now
-                  {<PlayCircleOutlineIcon sx={{ fontSize: "40px" }} />}
+              <div className="slide-1__btns">
+                <Button variant="contained">
+                  Whatch Now <PlayCircleOutlineIcon sx={{ fontSize: "40px" }} />
                 </Button>
-                <Button
-                  variant="outlined"
-                  sx={{ color: "white", fontSize: "30px" }}
-                >
-                  Watch Later
-                  {<WatchLaterIcon sx={{ fontSize: "40px" }} />}
+                <Button variant="outlined">
+                  Whatch Later <WatchLaterIcon sx={{ fontSize: "40px" }} />
                 </Button>
+              </div>
+              <div className="slide-1__info">
+                <h1>Avatar: The Way of Water</h1>
+                <div className="slide-1__more-info">
+                  <div>
+                    <p>Action</p>
+                  </div>
+                  <div>
+                    <p>Adventure</p>
+                  </div>
+                  <div>
+                    <p>Science Fiction</p>
+                  </div>
+                  <div>
+                    <img src={dateIcon} alt="" />
+                    <p>2022</p>
+                  </div>
+                  <div>
+                    <img src={timeIcon} alt="" />
+                    <p>3:12:45</p>
+                  </div>
+                  <div>
+                    <img src={starIcon} alt="" />
+                    <p>8.5</p>
+                  </div>
+                </div>
+                <p
+                  className="
+                slide-1__description"
+                >
+                  Set more than a decade after the events of the first film,
+                  learn the story of the Sully family (Jake, Neytiri, and their
+                  kids), the trouble that follows them, the lengths they go to
+                  keep each other safe, the battles they fight to stay alive,
+                  and the tragedies they endure.
+                </p>
               </div>
             </div>
           </div>

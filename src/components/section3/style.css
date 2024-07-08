@@ -1,55 +1,65 @@
 .card_box {
   display: flex;
   flex-direction: column;
-  width: 355px;
+  width: 360px;
   cursor: pointer;
+  margin: 0 5px;
+  transition: 0.4s;
 }
 
 .card_box:hover {
-  border: solid;
-  border-color: aqua;
-  transition: all 0.65s;
+  transform: scale(1.03);
 }
 
 .card_box img {
   height: 341px;
   width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .card_box_info {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
+  color: white;
 }
 
-.card_box_info p {
-  color: white;
+.card_box_info_title {
+  font-size: 24px;
+  font-weight: 600px;
 }
 
 .card_box_info_direction {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
 .card_box_info_direction p {
   color: white;
-  background-color: red;
+  background-color: #ff0000;
+  padding: 8px;
+  border-radius: 10px;
 }
 
 .section__3 {
   background-color: black;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .section__3__title {
   background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  margin: 70px 0 25px 0;
 }
 .section__3__title h1 {
   color: white;
-  font-size: 40px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .section__3__title a {
@@ -58,4 +68,38 @@
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.card-box__banner {
+  position: relative;
+}
+
+.card-box__banner-inner {
+  position: absolute;
+  color: white;
+  /* display: flex;
+  justify-content: space-between;
+  width: 100%; */
+  width: 100%;
+}
+
+.card-box__banner-inner img {
+  width: 15px;
+  height: 15px;
+}
+.card-box__banner-inner div {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.card-box__banner-inner div:first-child {
+  left: 15px;
+}
+
+.card-box__banner-inner div:nth-child(2) {
+  right: 15px;
 }

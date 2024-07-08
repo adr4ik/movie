@@ -1,20 +1,20 @@
 /*sector 2 minicard*/
 
 .minicard {
-  background-color: black;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 30px;
 }
 
-.section__2 h1 {
+.section__2 h3 {
   color: white;
-  background-color: black;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  font-size: 40px;
+
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: 500;
 }
 .minicard__box {
   height: 103px;
@@ -22,25 +22,26 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: black;
+
   cursor: pointer;
-  transition: 0.4;
+  transition: 0.4s;
 }
 .minicard__box:hover {
-  border: solid;
-  border-color: rgb(0, 26, 144);
+  transform: scale(1.5);
 }
 
 .minicard__box img {
   height: 103px;
+  width: 64px;
+  border-radius: 5px;
 }
 
 .minicard__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 17px;
-  color: aliceblue;
+  justify-content: center;
+  gap: 4px;
+  color: white;
 }
 
 /*sector 2 minicard end*/
