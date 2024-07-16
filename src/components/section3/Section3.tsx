@@ -1,44 +1,29 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./style.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import TradingCard from "./Card";
-
-interface Movie {
-  img: string;
-  title: string;
-  genre: string[];
-  id: number;
-}
-const trendingMovies: Movie[] = [
-  {
-    img: "https://kinogo.biz/uploads/mini/minifull/681/1720044649-1469384998.webp",
-    title: "Граф Монте-Кристо",
-    genre: ["action", "comedy"],
-    id: 1,
-  },
-  {
-    img: "https://kinogo.biz/uploads/mini/minifull/7e6/1719936642-1356814439.webp",
-    title: "Я – Селин Дион",
-    genre: ["action", "comedy", "crime"],
-    id: 2,
-  },
-  {
-    img: "https://kinogo.biz/uploads/mini/minifull/2bd/1715868674-494695612.webp",
-    title: "Криминальный город. Возмездие",
-    genre: ["action", "comedy", "drama"],
-    id: 3,
-  },
-];
+import { TrendingContext } from "../../contexts/TrendingContext";
 
 export default function Section3() {
+  const context = useContext(TrendingContext);
+
+  if (!context) {
+    throw new Error("Trending context not Found");
+  }
+
+  const { movies, getTrendingMovies } = context;
+
+  useEffect(() => {
+    getTrendingMovies();
+  }, []);
   return (
     <div className="container">
       <div className="section__3__title">
-        <h1>Trending</h1>
+        <h1>Tranding</h1>
         <a href="#">View All {<ArrowForwardIcon />}</a>
       </div>
       <section className="section__3">
-        {trendingMovies.map((movie) => (
+        {movies.map((movie) => (
           <TradingCard key={movie.id} movie={movie} />
         ))}
       </section>

@@ -2,12 +2,13 @@ import React from "react";
 import timeIcon from "../../assets/time.svg";
 import starIcon from "../../assets/star.svg";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 interface Movie {
   img: string;
   title: string;
-  genre: string[];
-  id: number;
+  genre: string;
+  id?: number;
 }
 
 interface OneMovie {
@@ -15,8 +16,10 @@ interface OneMovie {
 }
 
 export default function TradingCard({ movie }: OneMovie) {
+  const navigate = useNavigate();
+
   return (
-    <div className="card_box  ">
+    <div className="card_box" onClick={() => navigate(`/tranding/${movie.id}`)}>
       <div className="card-box__banner">
         <div className="card-box__banner-inner">
           <div>
@@ -35,9 +38,7 @@ export default function TradingCard({ movie }: OneMovie) {
           <p>{movie.title}</p>
         </div>
         <div className="card_box_info_direction">
-          {movie.genre.map((genre) => (
-            <p key={Math.random()}>{genre}</p>
-          ))}
+          <p>{movie.genre}</p>
         </div>
       </div>
     </div>

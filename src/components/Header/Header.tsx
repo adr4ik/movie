@@ -9,7 +9,7 @@ export default function Header() {
     <header className="header ">
       <div className="container header__inner">
         <nav>
-          <a href="">Home</a>
+          <a href="/">Home</a>
           <a href="">Genre</a>
           <a href="">Country</a>
         </nav>

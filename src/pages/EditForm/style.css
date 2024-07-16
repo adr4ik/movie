@@ -1,0 +1,29 @@
+.color-white {
+  color: white;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.add-form {
+  display: flex;
+  width: 540px;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
+  background-image: url("../../assets/fd1132de32fcc36eb79ecf8eb0d99c64.jpg");
+  background-position: center;
+  border-radius: 35px;
+}
+
+.add-form input {
+  width: 450px;
+  font-size: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 0, 0);
+}

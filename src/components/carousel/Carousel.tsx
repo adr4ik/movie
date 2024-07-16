@@ -9,6 +9,7 @@ import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import dateIcon from "../../assets/date.svg";
 import timeIcon from "../../assets/time.svg";
 import starIcon from "../../assets/star.svg";
+import { useNavigate } from "react-router-dom";
 
 function Carousel() {
   const settings = {
@@ -19,6 +20,8 @@ function Carousel() {
     slidesToScroll: 1,
     arrows: false,
   };
+
+  const navigate = useNavigate();
   return (
     <div className="slider-container ">
       <Slider {...settings}>
@@ -26,11 +29,14 @@ function Carousel() {
           <div className="slide slide-1">
             <div className="container">
               <div className="slide-1__btns">
-                <Button variant="contained">
-                  Whatch Now <PlayCircleOutlineIcon sx={{ fontSize: "40px" }} />
+                <Button
+                  variant="contained"
+                  onClick={() => navigate("/add-tranding")}
+                >
+                  Add Movie <PlayCircleOutlineIcon sx={{ fontSize: "40px" }} />
                 </Button>
                 <Button variant="outlined">
-                  Whatch Later <WatchLaterIcon sx={{ fontSize: "40px" }} />
+                  Whatch Movies <WatchLaterIcon sx={{ fontSize: "40px" }} />
                 </Button>
               </div>
               <div className="slide-1__info">

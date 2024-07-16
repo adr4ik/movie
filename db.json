@@ -1,0 +1,22 @@
+{
+  "trendigmovies": [
+    {
+      "img": "https://kinogo.biz/uploads/mini/minifull/7e6/1719936642-1356814439.webp",
+      "title": "Я – Селин Дион",
+      "genre": "crime",
+      "id": "2"
+    },
+    {
+      "img": "https://kinogo.biz/uploads/mini/minifull/2bd/1715868674-494695612.webp",
+      "title": "Криминальный город. Возмездие",
+      "genre": "comedy",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "img": "asdasdas",
+      "title": "dasdasd",
+      "genre": "dasdasd"
+    }
+  ]
+}
