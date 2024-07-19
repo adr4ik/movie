@@ -103,3 +103,12 @@
 .section__6__title_sectors a:focus {
   background-color: #ff0000;
 }
+
+@media screen and (max-width: 570px) {
+  .section__6 {
+    justify-content: center;
+  }
+  .section__6__title_sectors a {
+    display: none;
+  }
+}

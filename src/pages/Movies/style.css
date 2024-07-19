@@ -1,4 +1,4 @@
-.card_box-5 {
+.card_box-4 {
   display: flex;
   flex-direction: column;
   width: 256px;
@@ -8,109 +8,79 @@
   transition: 0.4s;
 }
 
-.card_box-5:hover {
+.card_box-4:hover {
   transform: scale(1.03);
 }
 
-.card_box-5 img {
+.card_box-4 img {
   height: 344px;
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.card_box-5_info {
+.card_box-4_info {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   color: white;
 }
 
-.card_box-5_info_title {
+.card_box-4_info_title {
   font-size: 24px;
   font-weight: 600;
   color: white;
 }
 
-.card_box-5_info_direction {
+.card_box-4_info_direction {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.card_box-5_info_direction_time p {
+.card_box-4_info_direction_time {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  text-align: left;
+  justify-content: center;
   padding: 4px;
   border-radius: 10px;
   color: white;
-  width: 90px;
+  gap: 5px;
+  width: 82.3px;
   height: 32px;
   border: 1px solid rgb(255, 0, 0);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0%;
-  text-align: left;
 }
 
-.card_box-5_info_direction img {
+.card_box-4_info_direction img {
   height: 13.3px;
   width: 13.3px;
   color: white;
 }
 
-.section__5 {
+.section__4 {
   background-color: black;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.section__5__title {
+.section__4__title {
   background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 70px 0 25px 0;
 }
-.section__5__title h1 {
+.section__4__title h1 {
   margin-top: 20px;
   color: white;
   font-size: 24px;
   font-weight: 700;
 }
 
-.section__5__title a {
+.section__4__title a {
   text-decoration: none;
   color: rgb(208, 206, 206);
   display: flex;
   align-items: center;
   gap: 5px;
-}
-.card-box-5__banner {
-  position: relative;
-}
-.card-box-5__banner__inner {
-  position: absolute;
-  color: white;
-
-  width: 100%;
-  width: 53px;
-  height: 22px;
-  top: 10px;
-  display: flex;
-  align-items: center;
-
-  font-weight: 500;
-  background-color: #ff0000;
-  border-radius: 5px;
-}
-
-@media screen and (max-width: 1163px) {
-  .section__5 {
-    gap: 50px;
-  }
 }

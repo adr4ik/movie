@@ -63,7 +63,7 @@ export default function AddTrendingFrom() {
           variant="contained"
           sx={{ backgroundColor: "red" }}
         >
-          Add New Movie
+          Add Movie to HomePage
         </Button>
       </div>
     </div>

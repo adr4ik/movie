@@ -1,0 +1,151 @@
+.color-white {
+  color: white;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.add-form {
+  display: flex;
+  width: 540px;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
+  background-image: url("../../../assets/fd1132de32fcc36eb79ecf8eb0d99c64.jpg");
+  background-position: center;
+  border-radius: 35px;
+}
+
+.add-form input {
+  width: 450px;
+  font-size: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 0, 0);
+}
+
+/*Details*/
+
+.detailsBox {
+  display: flex;
+  gap: 15px;
+}
+.detailsBox-leftSector img {
+  height: 576px;
+  width: 352px;
+}
+
+.detailsBox-rightSector {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 576px;
+}
+
+.rightSector-title {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 51px;
+  letter-spacing: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightSector-title button {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 15px;
+  transition: 0.5s;
+  background: rgb(255, 0, 0);
+  cursor: pointer;
+}
+.rightSector-title button:hover {
+  transform: scale(1.07);
+}
+.rightSector-genre {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.rightSector-genre p:nth-child(-n + 2) {
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  border-radius: 10px;
+}
+
+.rightSector-genre p:nth-last-child(-n + 3) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rightSector-text p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.detailsBox-movie-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+}
+
+.rightSector-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.rightSector-buttons button {
+  border-radius: 10px;
+  border: 1px solid rgb(255, 0, 0);
+  color: red;
+  background-color: black;
+}
+
+/*season*/
+
+.details-season-sector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-season-sector h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+.details-seasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.details-seasons a {
+  width: 544px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(217, 217, 217);
+  cursor: pointer;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+  display: flex;
+}
+
+.details-seasons a:focus {
+  background-color: #ff0000;
+  color: white;
+}

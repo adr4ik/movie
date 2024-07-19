@@ -84,3 +84,9 @@
   align-items: center;
   gap: 5px;
 }
+
+@media screen and (max-width: 1163px) {
+  .section__4 {
+    gap: 50px;
+  }
+}

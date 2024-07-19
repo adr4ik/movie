@@ -103,3 +103,9 @@
 .card-box__banner-inner div:nth-child(2) {
   right: 15px;
 }
+
+@media screen and (max-width: 757px) {
+  .section__3 {
+    justify-content: center;
+  }
+}

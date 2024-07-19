@@ -1,12 +1,6 @@
 {
   "trendigmovies": [
     {
-      "img": "https://kinogo.biz/uploads/mini/minifull/7e6/1719936642-1356814439.webp",
-      "title": "Я – Селин Дион",
-      "genre": "crime",
-      "id": "2"
-    },
-    {
       "img": "https://kinogo.biz/uploads/mini/minifull/2bd/1715868674-494695612.webp",
       "title": "Криминальный город. Возмездие",
       "genre": "comedy",
@@ -14,9 +8,45 @@
     },
     {
       "id": "4",
-      "img": "asdasdas",
-      "title": "dasdasd",
-      "genre": "dasdasd"
+      "img": "https://kinogo.biz/uploads/mini/minifull/2b3/1716234771-ukradennaja-dolina.webp",
+      "title": "Украденная долина",
+      "genre": "Боевик"
+    },
+    {
+      "img": "https://kinogo.biz/uploads/mini/minifull/2b8/1716228954-sredi-iv.webp",
+      "title": "Среди Ив",
+      "genre": "Вестерн",
+      "id": "-iujmeQ"
+    }
+  ],
+  "new_release": [
+    {
+      "img": "https://kinogo.biz/uploads/mini/minifull/c60/1720080687-1411047893.webp",
+      "title": "Вкус страха",
+      "duration": "2.55",
+      "quality": "true",
+      "id": 1
+    },
+    {
+      "img": "https://kinogo.biz/uploads/mini/minifull/14a/1720224703-649547337.webp",
+      "title": "Самая большая луна",
+      "duration": 2.34,
+      "quality": true,
+      "id": 2
+    },
+    {
+      "img": "https://kinogo.biz/uploads/mini/minifull/b72/1720188643-nikto-i-nichto.webp",
+      "title": "Никто и ничто",
+      "duration": 5.34,
+      "quality": false,
+      "id": 3
+    },
+    {
+      "img": "https://kinogo.biz/uploads/mini/minifull/39f/1719396652-1381743035.jpg",
+      "title": "Зомби в Сеуле",
+      "duration": 5.34,
+      "quality": true,
+      "id": 4
     }
   ]
 }

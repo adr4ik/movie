@@ -70,3 +70,55 @@
   background-color: white;
   cursor: pointer;
 }
+
+.search-results {
+  background-color: white;
+  position: absolute;
+  top: 100px;
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 99;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-results > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-right: 10px;
+  transition: 0.2s;
+}
+.search-results div:hover {
+  background-color: rgb(233, 220, 220);
+}
+.search-results img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.drawer-button {
+  display: none;
+}
+
+.drawer {
+  background-color: rgb(0, 0, 0);
+  transition: color 2s;
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (max-width: 890px) {
+  .drawer-button {
+    display: flex;
+  }
+  .header__inner nav a {
+    display: none;
+  }
+}

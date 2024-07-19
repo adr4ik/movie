@@ -11,81 +11,81 @@ interface ChildrenProps {
 
 //! tipizacyja produkta
 
-export interface TrandingMovie {
+export interface Movie {
   img: string;
   title: string;
-  genre: string;
+  duration: number;
+  quality: boolean;
+
   id?: number;
 }
 
 //! tipizacja contexta
 
 interface ContextType {
-  movies: TrandingMovie[];
-  oneMovie: TrandingMovie | null;
-  getTrendingMovies: (search?: string) => Promise<TrandingMovie[]>;
-  createMovie: (movie: TrandingMovie) => void;
+  movies: Movie[];
+  oneMovie: Movie | null;
+  getMovies: (search?: string) => Promise<Movie[]>;
+  createMovie: (movie: Movie) => void;
   getOneMovie: (id: string | undefined) => void;
   deleteMovie: (id: string | undefined) => void;
-  updateMovie: (id: string | undefined, movie: TrandingMovie) => void;
+  updateMovie: (id: string | undefined, movie: Movie) => void;
 }
 
 //! tipizacja reducer
 
 type Action =
-  | { type: "GET_MOVIES"; payload: TrandingMovie[] }
+  | { type: "MOVIES"; payload: Movie[] }
   | {
-      type: "GET_ONE_MOVIE";
-      payload: TrandingMovie;
+      type: "ONE_MOVIE";
+      payload: Movie;
     };
 
 //! tipizacja init state
 
 interface INIT_STATE {
-  movies: TrandingMovie[];
-  oneMovie: TrandingMovie | null;
+  movies: Movie[];
+  oneMovie: Movie | null;
 }
 
-const API = "http://localhost:8000/trendigmovies";
+const API = "http://localhost:8000/new_release";
 
 const INIT_STATE: INIT_STATE = {
   movies: [],
   oneMovie: null,
 };
 
-export const TrendingContext = createContext<ContextType | undefined>(
-  undefined
-);
+export const MoviesContext = createContext<ContextType | undefined>(undefined);
 
 function reducer(state: INIT_STATE, action: Action) {
   switch (action.type) {
-    case "GET_MOVIES":
+    case "MOVIES":
       return { ...state, movies: action.payload };
-    case "GET_ONE_MOVIE":
+    case "ONE_MOVIE":
       return { ...state, oneMovie: action.payload };
   }
 }
 
-export default function TrendingContextProvider({ children }: ChildrenProps) {
+export default function MoviesContextProvider({ children }: ChildrenProps) {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  async function getTrendingMovies(search = "") {
+  async function getMovies(search = "") {
     let res = await axios.get(`${API}/?q=${search}`);
     dispatch({
-      type: "GET_MOVIES",
+      type: "MOVIES",
       payload: res.data,
     });
     return res.data;
   }
 
-  async function createMovie(movie: TrandingMovie) {
+  async function createMovie(movie: Movie) {
     await axios.post(API, movie);
   }
 
   async function getOneMovie(id: string | undefined) {
     let res = await axios.get(`${API}/${id}`);
     dispatch({
-      type: "GET_ONE_MOVIE",
+      type: "ONE_MOVIE",
       payload: res.data,
     });
   }
@@ -94,18 +94,18 @@ export default function TrendingContextProvider({ children }: ChildrenProps) {
     await axios.delete(`${API}/${id}`);
   }
 
-  async function updateMovie(id: string | undefined, movie: TrandingMovie) {
+  async function updateMovie(id: string | undefined, movie: Movie) {
     await axios.patch(`${API}/${id}`, movie);
-    getTrendingMovies();
+    getMovies();
     getOneMovie(id);
   }
 
   return (
-    <TrendingContext.Provider
+    <MoviesContext.Provider
       value={{
         movies: state.movies,
         oneMovie: state.oneMovie,
-        getTrendingMovies,
+        getMovies,
         createMovie,
         getOneMovie,
         deleteMovie,
@@ -113,6 +113,6 @@ export default function TrendingContextProvider({ children }: ChildrenProps) {
       }}
     >
       {children}
-    </TrendingContext.Provider>
+    </MoviesContext.Provider>
   );
 }

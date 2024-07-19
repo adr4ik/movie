@@ -1,22 +1,25 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./style.css";
-import { TrendingContext } from "../contexts/TrendingContext";
 import { useNavigate, useParams } from "react-router-dom";
 import { Backdrop, Button, CircularProgress } from "@mui/material";
-import ConfirmModel from "./components/ConfirmModel";
-import Section6 from "../components/section6/Section6";
+import ConfirmModel from "../../components/ConfirmModel";
+import Section6 from "../../../components/section6/Section6";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import timeIcon from "../assets/time.svg";
-import starIcon from "../assets/star.svg";
+import timeIcon from "../../../assets/time.svg";
+import starIcon from "../../../assets/star.svg";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import EditFormModal from "./components/EditFormModal";
+import { MoviesContext } from "../../../contexts/NewReleaseContext";
+import HdIcon from "@mui/icons-material/Hd";
+import MoviesEditFormModal from "../MoviesEditFormModal.tsx/MoviesEditFormModal";
+
 interface Movie {
   img: string;
   title: string;
-  genre: string;
+  duration: number;
+  quality: boolean;
 }
-export default function TrandingDetails() {
-  const context = useContext(TrendingContext);
+export default function MoviesDetails() {
+  const context = useContext(MoviesContext);
 
   const [open, setOpen] = useState(false);
 
@@ -63,7 +66,17 @@ export default function TrandingDetails() {
             <button>+ Add to Favourite</button>
           </div>
           <div className="rightSector-genre">
-            <p>{oneMovie.genre}</p>
+            <p>
+              {oneMovie.quality && (
+                <HdIcon
+                  sx={{
+                    width: "31px",
+                    height: "32px",
+                    backgroundColor: "red",
+                  }}
+                />
+              )}
+            </p>
             <p>Science Fiction</p> <p>{<CalendarMonthIcon />} 2023</p>{" "}
             <p>
               <img src={timeIcon} alt="timeicon" /> 50:43
@@ -93,7 +106,7 @@ export default function TrandingDetails() {
           </div>
           <div className="rightSector-buttons">
             <ConfirmModel deleteMovie={deleteMovie} id={id} />
-            <EditFormModal oneMovie={oneMovie} handleEdit={handleEdit} />
+            <MoviesEditFormModal oneMovie={oneMovie} handleEdit={handleEdit} />
           </div>
         </div>
       </div>{" "}

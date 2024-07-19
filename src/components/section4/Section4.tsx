@@ -1,6 +1,7 @@
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import TradingCard2 from "./Card4";
+import { useNavigate } from "react-router-dom";
 interface Movie {
   img: string;
   title: string;
@@ -8,6 +9,7 @@ interface Movie {
   quality: boolean;
   id: number;
 }
+
 const trendingMovies: Movie[] = [
   {
     img: "https://kinogo.biz/uploads/mini/minifull/c60/1720080687-1411047893.webp",
@@ -43,11 +45,12 @@ const trendingMovies: Movie[] = [
   },
 ];
 export default function Section4() {
+  const navigate = useNavigate();
   return (
     <div className="container">
       <div className="section__4__title">
         <h1>New Release - Movies</h1>
-        <a href="#">
+        <a href="/movies">
           View All <ArrowForwardIcon />
         </a>
       </div>
